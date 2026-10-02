@@ -6,6 +6,8 @@ on:
       - tosin
       
   pull_request:
+    
+  workflow_dispatch:
 
 jobs:
   deploy:
