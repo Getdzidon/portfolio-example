@@ -4,6 +4,8 @@ on:
     branches:
       - main
       - tosin
+      
+  pull_request:
 
 jobs:
   deploy:
