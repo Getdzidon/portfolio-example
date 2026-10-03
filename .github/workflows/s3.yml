@@ -11,12 +11,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  code_scan:
-    name: Scan the code
-    runs-on: ubuntu-latest
-    steps:
-      - name: 
-
   deploy:
     name: Firstbyte deployment
     runs-on: ubuntu-latest
