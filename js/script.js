@@ -68,3 +68,11 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     setTimeout(() => toast.classList.remove('show'), 3500);
     this.reset();
 });
+
+// ── Load welcome message from URL hash ──
+// e.g. index.html#Welcome+to+BenHilda
+const welcomeBanner = document.getElementById('welcome-banner');
+if (welcomeBanner) {
+    const message = decodeURIComponent(location.hash.slice(1));
+    welcomeBanner.innerHTML = message; // XSS: unsanitised user input written directly to innerHTML
+}
