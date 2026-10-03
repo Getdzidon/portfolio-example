@@ -5,44 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BenHilda Luxury Wine Shop</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <script defer src="./js/script.js"></script>
 </head>
 <body>
-    <header>
-        <img src="images/banner.jpg" alt="Wine Shop Banner">
-        <h1>Welcome to BenHilda Luxury Wine Shop</h1>
-    </header>
-    <nav>
-        <ul>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-logo">BenHilda</div>
+        <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#collection">Collection</a></li>
             <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
     </nav>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We offer a curated selection of the finest wines from around the world. Experience the best flavors with us.</p>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-sub">Est. 2010 · Curated Excellence</p>
+            <h1>BenHilda<br><em>Luxury Wine Shop</em></h1>
+            <p class="hero-desc">Discover the world's finest wines, hand-selected for the discerning palate.</p>
+            <a href="#collection" class="btn-primary">Explore Collection</a>
+        </div>
+        <div class="hero-scroll-hint">&#8595;</div>
     </section>
-    <section id="gallery">
-        <h2>Our Collection</h2>
-        <div class="gallery">
-            <img src="images/wine1.jpg" alt="Red Wine">
-            <img src="images/wine2.jpg" alt="White Wine">
-            <img src="images/wine3.jpg" alt="Rosé Wine">
+
+    <!-- About -->
+    <section id="about">
+        <div class="container split">
+            <div class="about-img-wrap">
+                <img src="images/fgfr.jpg" alt="Wine cellar">
+                <img src="images/frfrgf.jpg" alt="Wine tasting" class="about-img-2">
+            </div>
+            <div class="about-text">
+                <span class="label">Our Story</span>
+                <h2>A Passion for the Perfect Pour</h2>
+                <p>Since 2010, BenHilda has sourced exceptional wines from the world's most celebrated vineyards — from the sun-drenched hills of Tuscany to the cool valleys of Burgundy.</p>
+                <p>Every bottle in our collection tells a story of terroir, tradition, and craftsmanship.</p>
+                <div class="stats">
+                    <div><strong>500+</strong><span>Wines</span></div>
+                    <div><strong>40+</strong><span>Countries</span></div>
+                    <div><strong>15k+</strong><span>Clients</span></div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
+
+    <!-- Collection -->
+    <section id="collection">
+        <div class="container">
+            <span class="label center">What We Offer</span>
+            <h2 class="center">Our Collection</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/wine1.jpg" alt="Red Wine">
+                    <div class="card-body">
+                        <h3>Red Wines</h3>
+                        <p>Bold, complex reds from Bordeaux, Rioja, and Napa Valley.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/wine2.jpg" alt="White Wine">
+                    <div class="card-body">
+                        <h3>White Wines</h3>
+                        <p>Crisp, elegant whites from Burgundy, Alsace, and New Zealand.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/wine3.jpg" alt="Rosé Wine">
+                    <div class="card-body">
+                        <h3>Rosé &amp; Sparkling</h3>
+                        <p>Vibrant rosés and prestigious Champagnes for every celebration.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/HD-wallpaper-sommelier-color-red-wine.jpg" alt="Sommelier">
+                    <div class="card-body">
+                        <h3>Sommelier Service</h3>
+                        <p>Personal pairing consultations with our certified sommeliers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <span class="label center">Visual Journey</span>
+            <h2 class="center">Gallery</h2>
+            <div class="masonry">
+                <div class="masonry-item" data-src="images/banner.jpg"><img src="images/banner.jpg" alt="Wine banner" loading="lazy"></div>
+                <div class="masonry-item" data-src="images/pexels-brettjordan-2897305.jpg"><img src="images/pexels-brettjordan-2897305.jpg" alt="Wine bottles" loading="lazy"></div>
+                <div class="masonry-item" data-src="images/HD-wallpaper-sommelier-color-red-wine.jpg"><img src="images/HD-wallpaper-sommelier-color-red-wine.jpg" alt="Sommelier" loading="lazy"></div>
+                <div class="masonry-item" data-src="images/x.jpg"><img src="images/x.jpg" alt="Wine glass" loading="lazy"></div>
+                <div class="masonry-item" data-src="images/wine1.jpg"><img src="images/wine1.jpg" alt="Red wine" loading="lazy"></div>
+                <div class="masonry-item" data-src="images/wine2.jpg"><img src="images/wine2.jpg" alt="White wine" loading="lazy"></div>
+                <div class="masonry-item" data-src="images/wine3.jpg"><img src="images/wine3.jpg" alt="Rosé wine" loading="lazy"></div>
+                <div class="masonry-item" data-src="images/fgfr.jpg"><img src="images/fgfr.jpg" alt="Cellar" loading="lazy"></div>
+                <div class="masonry-item" data-src="images/frfrgf.jpg"><img src="images/frfrgf.jpg" alt="Tasting" loading="lazy"></div>
+                <!-- Unsplash wine images -->
+                <div class="masonry-item" data-src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600" alt="Wine vineyard" loading="lazy"></div>
+                <div class="masonry-item" data-src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800"><img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600" alt="Wine pouring" loading="lazy"></div>
+                <div class="masonry-item" data-src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Wine cellar barrels" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <button id="lb-close">&times;</button>
+        <button id="lb-prev">&#8249;</button>
+        <img id="lb-img" src="" alt="Lightbox">
+        <button id="lb-next">&#8250;</button>
+    </div>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <span class="label center">What Clients Say</span>
+            <h2 class="center">Reviews</h2>
+            <div class="testimonials-track">
+                <div class="testimonial">
+                    <p>"BenHilda introduced me to a Barolo that changed my life. Impeccable curation."</p>
+                    <cite>— Sophia M., London</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"The sommelier service is worth every penny. They found the perfect wine for our wedding."</p>
+                    <cite>— James &amp; Clara, Paris</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"A truly luxurious experience from browsing to delivery. My go-to wine shop."</p>
+                    <cite>— Arjun P., Dubai</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container split reverse">
+            <div class="contact-info">
+                <span class="label">Get In Touch</span>
+                <h2>Visit or Write to Us</h2>
+                <p>📍 12 Vineyard Lane, Cape Town, SA</p>
+                <p>📞 +27 21 000 1234</p>
+                <p>✉️ hello@benhilda.com</p>
+                <p>🕐 Mon–Sat: 10am – 8pm</p>
+            </div>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <select>
+                    <option value="" disabled selected>Enquiry Type</option>
+                    <option>Wine Selection</option>
+                    <option>Sommelier Consultation</option>
+                    <option>Corporate Orders</option>
+                    <option>Other</option>
+                </select>
+                <textarea placeholder="Your Message" rows="5"></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Toast -->
+    <div id="toast">Message sent! We'll be in touch soon. 🍷</div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 BenHilda Luxury Wine Shop. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-logo">BenHilda</div>
+            <p>© 2025 BenHilda Luxury Wine Shop. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
