@@ -11,6 +11,12 @@ on:
   workflow_dispatch:
 
 jobs:
+  code_scan:
+    name: Scan the code
+    runs-on: ubuntu-latest
+    steps:
+      - name: 
+
   deploy:
     name: Firstbyte deployment
     runs-on: ubuntu-latest
@@ -27,4 +33,4 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --exclude ".*" --exclude "Dockerfile" --exclude "*.txt" 
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --exclude "Dockerfile" --exclude "*.txt" 
